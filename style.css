@@ -1,0 +1,24 @@
+.dark-mode{
+  background-color: black;
+  color: white;
+}
+
+.dark-mode.btn{
+  border: white;
+}
+
+
+#btn{
+  height: 60px;
+  width: 200px;
+  border-radius: 20%;
+  font-size: larger;
+}
+
+div{
+  width: 300px;
+  align-self: center;
+  margin: 200px;
+  margin-left: 500px;
+}
+

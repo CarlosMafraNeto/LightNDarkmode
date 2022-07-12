@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ligh&DarkMode</title>
+  </head>
+  <body>
+    <div class="flexbox">
+      <h1 id="pageTitle">LightMode Activated</h1>
+      <button id="btn">Clique Aqui para mudar</button>
+    </div>
+
+    <script>
+      function agoraChama() {
+        changeMode()
+        innerText()
+      }
+      const BOTAO = document.getElementById('btn')
+      const TEXTO = document.getElementById('pageTitle')
+      const Body = document.getElementsByTagName('body')[0]
+      const DarkmodeClass = 'dark-mode'
+
+      BOTAO.addEventListener('click', agoraChama)
+
+      function changeMode() {
+        BOTAO.classList.toggle('dark-mode')
+        TEXTO.classList.toggle('dark-mode')
+        Body.classList.toggle('dark-mode')
+      }
+
+      function innerText() {
+        if (Body.classList.contains(DarkmodeClass)) {
+          TEXTO.innerHTML = 'Darkmode Activated'
+          return
+        }
+
+        if (!Body.classList.contains(DarkmodeClass)) {
+          TEXTO.innerHTML = 'LightMode Activated'
+          return
+        }
+      }
+    </script>
+  </body>
+</html>
